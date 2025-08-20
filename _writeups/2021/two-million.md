@@ -15,3 +15,4 @@ tags: crypto, easy
 Escaneo con nmap:
 ```bash
 nmap -A -T4 10.10.10.10
+```
