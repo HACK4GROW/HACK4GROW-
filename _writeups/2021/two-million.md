@@ -57,4 +57,5 @@ ffuf -u http://10.10.11.221 -H "Host: FUZZ.2million.htb" \                      
 -mc all -ac -t 50
 ```
 No pudimos encontrar nada asì que vamos directo a la web
-ll
+
+ahora si vamos con todo
