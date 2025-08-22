@@ -47,4 +47,13 @@ OpenSSH 8.9p1 Ubuntu 3ubuntu0.1
 nginx
 
 Vemos que la ip redirige a 2million.htb
-lo sumamos al etc/hosts para tener visibilidad
+lo sumamos al /etc/hosts para tener visibilidad
+
+### Fuerza bruta para descubrir subdominios
+
+```bash
+ffuf -u http://10.10.11.221 -H "Host: FUZZ.2million.htb" \                                                      37s  system root@kali
+-w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt \
+-mc all -ac -t 50
+```
+No pudimos encontrar nada asì que vamos directo a la web
