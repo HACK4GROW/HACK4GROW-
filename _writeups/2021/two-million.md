@@ -24,3 +24,6 @@ nmap -p- -sS --min-rate 5000 --open -vvv 10.10.11.221 -oG allPorts
 *   -p-  pedimos que escanee todos los puertos desde el 1 al 65535
 *   -sS  para enviar peticiones sin que complete el la conexion(three-way handshake”) solo envia un syn ack y lo corta con un RST asì podemos evitar dejar tantos logs y pasar mas desapercibidos
 *   --min-rate 5000 para decirle que envie un minimo de 5000 paquetes por segundo
+*   --open para que nos valla mostrando puertos abiertos sobre la marcha
+*   -vvv triple verbose para que nos valla mostrando en tiempo real todo el progreso del escaneo y no esperar a que termine
+*   -oG allPorts para que nos exporte el escaneo en un formato de nmap asì no debemos hacerlo de nuevo
