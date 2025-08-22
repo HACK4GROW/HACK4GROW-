@@ -41,3 +41,10 @@ nmap -sCV -p22,80 10.10.11.221 -vvv -oN targeted
 ```
 *  -sCV es una fusion de -sC -sV para detectar servicios y versiones.
 *  -oN para que guarde el resultado del escaneo en un formato normal como si apareciera en la terminal
+
+vemos que las versiones son las siguientes:
+OpenSSH 8.9p1 Ubuntu 3ubuntu0.1
+nginx
+
+Vemos que la ip redirige a 2million.htb
+lo sumamos al etc/hosts para tener visibilidad
