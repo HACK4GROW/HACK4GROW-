@@ -109,7 +109,10 @@ by Ben "epi" Risher 🤓                 ver: 2.11.0
 200      GET       94l      293w     4527c http://2million.htb/register
 200      GET        8l     3162w   254388c http://2million.htb/js/htb-frontpage.min.js
 200      GET     1242l     3326w    64952c http://2million.htb/
-405      GET        0l        0w        0c http://2million.htb/api/v1/invite/verify
+405      GET        0l        0w        0c http://2million.htb/api/v1/invite/verify </code>
+
+</pre> 
+
 
 Hay cosas que nos interesan pero destaca /js/inviteapi.min.js.
 Por Ejemplo encontramos:
