@@ -36,7 +36,7 @@ GitHubPages::Dependencies.gems.each do |gem, version|
   s.add_dependency(gem, "= #{version}")
 end
 ```
-
+sss
 <pre 
   class="command-line" 
   data-prompt="kali@kali $" 
