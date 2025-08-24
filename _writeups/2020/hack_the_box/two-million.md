@@ -61,3 +61,53 @@ No pudimos encontrar nada asì que vamos directo a la web
 ## Vemos una pagina web de Hack-The-Box
 
 ![Branching](../../../assets/images/wiretups/two_million/2025-08-24-16:22:39-screenshot.png)
+
+## Usamos feroxbuster para descubrir rutas ya que wfuzz y gobuster no funcionaban.
+
+
+<pre 
+  class="command-line" 
+  data-prompt="kali@kali $" 
+  data-output="4"
+><code class="language-bash"># Bash script with shell
+feroxbuster -u http://2million.htb
+                                                                                    
+ ___  ___  __   __     __      __         __   ___
+|__  |__  |__) |__) | /  `    /  \ \_/ | |  \ |__
+|    |___ |  \ |  \ | \__,    \__/ / \ | |__/ |___
+by Ben "epi" Risher 🤓                 ver: 2.11.0
+───────────────────────────┬──────────────────────
+ 🎯  Target Url            │ http://2million.htb
+ 🚀  Threads               │ 50
+ 📖  Wordlist              │ /usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt
+ 👌  Status Codes          │ All Status Codes!
+ 💥  Timeout (secs)        │ 7
+ 🦡  User-Agent            │ feroxbuster/2.11.0
+ 💉  Config File           │ /etc/feroxbuster/ferox-config.toml
+ 🔎  Extract Links         │ true
+ 🏁  HTTP methods          │ [GET]
+ 🔃  Recursion Depth       │ 4
+───────────────────────────┴──────────────────────
+ 🏁  Press [ENTER] to use the Scan Management Menu™
+──────────────────────────────────────────────────
+301      GET        7l       11w      162c Auto-filtering found 404-like response and created new filter; toggle off with --dont-filter
+302      GET        0l        0w        0c http://2million.htb/logout => http://2million.htb/
+401      GET        0l        0w        0c http://2million.htb/api
+200      GET       27l      201w    15384c http://2million.htb/images/favicon.png
+405      GET        0l        0w        0c http://2million.htb/api/v1/user/register
+200      GET        1l        8w      637c http://2million.htb/js/inviteapi.min.js
+405      GET        0l        0w        0c http://2million.htb/api/v1/user/login
+200      GET       80l      232w     3704c http://2million.htb/login
+200      GET       96l      285w     3859c http://2million.htb/invite
+302      GET        0l        0w        0c http://2million.htb/home => http://2million.htb/
+200      GET      245l      317w    28522c http://2million.htb/images/logofull-tr-web.png
+200      GET      260l      328w    29158c http://2million.htb/images/logo-transparent.png
+200      GET       46l      152w     1674c http://2million.htb/404
+200      GET        5l     1881w   145660c http://2million.htb/js/htb-frontend.min.js
+200      GET       13l     2209w   199494c http://2million.htb/css/htb-frontpage.css
+200      GET       13l     2458w   224695c http://2million.htb/css/htb-frontend.css
+200      GET       94l      293w     4527c http://2million.htb/register
+200      GET        8l     3162w   254388c http://2million.htb/js/htb-frontpage.min.js
+200      GET     1242l     3326w    64952c http://2million.htb/
+405      GET        0l        0w        0c http://2million.htb/api/v1/invite/verify
+</pre>
