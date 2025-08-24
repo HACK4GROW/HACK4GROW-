@@ -125,3 +125,10 @@ Por Ejemplo encontramos:
 ## Un invite
 Nos deja poner un codigo de invitaciòn que mas adelante conseguiremos
 ![Branching](../../../assets/images/wiretups/two_million/invite.png)
+
+## Encontramos en la pagina invite un inviteapi.min.js
+```js
+  <script src="/js/htb-frontend.min.js"></script>
+    <script defer src="/js/inviteapi.min.js"></script>
+    <script defer>
+```
