@@ -118,3 +118,10 @@ Hay cosas que nos interesan pero destaca /js/inviteapi.min.js.
 Por Ejemplo encontramos:
 ## Un Login
 ![Branching](../../../assets/images/wiretups/two_million/login.png)
+
+## Un register
+![Branching](../../../assets/images/wiretups/two_million/register.png)
+
+## Un invite
+Nos deja poner un codigo de invitaciòn que mas adelante conseguiremos
+![Branching](../../../assets/images/wiretups/two_million/invite.png)
