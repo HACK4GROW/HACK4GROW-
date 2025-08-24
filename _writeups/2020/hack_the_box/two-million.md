@@ -60,7 +60,7 @@ No pudimos encontrar nada asì que vamos directo a la web
 
 ## Vemos una pagina web de Hack-The-Box
 
-![Branching](../../../assets/images/wiretups/two_million/2025-08-24-16:22:39-screenshot.png)
+![Branching](../../../assets/images/wiretups/two_million/web.png)
 
 ## Usamos feroxbuster para descubrir rutas ya que wfuzz y gobuster no funcionaban.
 
@@ -110,3 +110,8 @@ by Ben "epi" Risher 🤓                 ver: 2.11.0
 200      GET        8l     3162w   254388c http://2million.htb/js/htb-frontpage.min.js
 200      GET     1242l     3326w    64952c http://2million.htb/
 405      GET        0l        0w        0c http://2million.htb/api/v1/invite/verify
+
+Hay cosas que nos interesan pero destaca /js/inviteapi.min.js.
+Por Ejemplo encontramos:
+## Un Login
+![Branching](../../../assets/images/wiretups/two_million/login.png)
