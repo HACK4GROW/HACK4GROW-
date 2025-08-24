@@ -58,6 +58,6 @@ ffuf -u http://10.10.11.221 -H "Host: FUZZ.2million.htb" \                      
 ```
 No pudimos encontrar nada asì que vamos directo a la web
 
-##Vemos una pagina web de Hack-The-Box
+## Vemos una pagina web de Hack-The-Box
 
-![Branching](https://hack4grow.github.io/HACK4GROW-/assets/images/wiretups/two_million/2025-08-24-16:22:39-screenshot.png)
+![Branching](../../assets/images/wiretups/two_million/2025-08-24-16:22:39-screenshot.png)
