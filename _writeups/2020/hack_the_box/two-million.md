@@ -1,12 +1,12 @@
 ---
 layout: writeup
-category: Test-CTF
+category: Hack The Box
 chall_description: https://i.imgur.com/TuImagen.png
 points: 100
 solves: 42
 date: 2025-08-19
 comments: true
-tags: crypto, easy
+tags: [crypto, easy]
 ---
 
 # Two-millions-Hack The Box - Ejemplo
