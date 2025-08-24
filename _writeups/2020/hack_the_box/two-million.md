@@ -110,4 +110,3 @@ by Ben "epi" Risher 🤓                 ver: 2.11.0
 200      GET        8l     3162w   254388c http://2million.htb/js/htb-frontpage.min.js
 200      GET     1242l     3326w    64952c http://2million.htb/
 405      GET        0l        0w        0c http://2million.htb/api/v1/invite/verify
-</pre>
