@@ -6,7 +6,7 @@ points: 100
 solves: 42
 date: 2025-08-19
 comments: true
-tags: [crypto, easy]
+tags: [hack the box,api,sql injection, easy]
 ---
 
 # Two-millions-Hack The Box - Ejemplo
