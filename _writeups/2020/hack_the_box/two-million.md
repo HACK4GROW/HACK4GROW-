@@ -144,3 +144,12 @@ makeInviteCode
 
 Lo ejecutamos desde la consola
 ![Branching](../../../assets/images/wiretups/two_million/makeinvited.png)
+Vemos que dice ROT13 lo cual es una pista que su codificacion es ROT13
+ROT13 es un metodo de codificacion que rota 13 posiciones la posicion real de la letra
+Ejemplo la A es la N
+Puedes hacerlo con chat-Gpt o desde la terminal de linux con el siguiente comando:
+
+```bash
+echo "Va beqre gb trarengr gur vaivgr pbqr, znxr n CBFG erdhrfg gb /ncv/i1/vaivgr/trarengr" | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+
+```
