@@ -141,3 +141,6 @@ Con algo muy particular y es que nos dice el nombre de la variable que envia un 
 ```bash
 makeInviteCode
 ```
+
+Lo ejecutamos desde la consola
+![Branching](../../../assets/images/wiretups/two_million/makeinvited.png)
