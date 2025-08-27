@@ -206,3 +206,6 @@ Vamos de nuevo a la consola de la seccion invite y probamos para ver si es corre
 Nos dice 1 lo que es codigo de estado exitoso.
 Asi que ahora lo ponemos en el campo y nos redirige directamente al register con el codigo puesto
 ![Branching](../../../assets/images/wiretups/two_million/redirectregister.png)
+
+Nos registramos,iniciamos sesion y ya estamos dentro.
+![Branching](../../../assets/images/wiretups/two_million/home.png)
