@@ -144,6 +144,8 @@ makeInviteCode
 
 Lo ejecutamos desde la consola
 ![Branching](../../../assets/images/wiretups/two_million/makeinvited.png)
+
+## Decodificamos ROT13
 Vemos que dice ROT13 lo cual es una pista que su codificacion es ROT13
 ROT13 es un metodo de codificacion que rota 13 posiciones la posicion real de la letra
 Ejemplo la A es la N
@@ -151,5 +153,17 @@ Puedes hacerlo con chat-Gpt o desde la terminal de linux con el siguiente comand
 
 ```bash
 echo "Va beqre gb trarengr gur vaivgr pbqr, znxr n CBFG erdhrfg gb /ncv/i1/vaivgr/trarengr" | tr 'A-Za-z' 'N-ZA-Mn-za-m'
-
 ```
+Vemos que la ruta que genera los codigos de invitados es
+/api/v1/invite/generate
+por lo que con curl vamos a enviar una peticion por POST y generarlo
+
+<pre 
+  class="command-line" 
+  data-prompt="kali@kali $" 
+  data-output="4"
+><code class="language-bash"># Bash script with shell
+curl -X POST http://2million.htb/api/v1/invite/generate
+{"0":200,"success":1,"data":{"code":"SDZVUEktNFNWNFktOVdPWlMtS1BXMFU=","format":"encoded"}}# </code>
+</pre> 
+Ese codigo es el que nos genera
