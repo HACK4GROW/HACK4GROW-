@@ -222,6 +222,9 @@ Envía una solicitud de GET a /api/v1/user/vpn/generate, y Regenerate envía un 
 
 Enviaré estas solicitudes a Burp Repeater y jugar con la API. /apidevuelve una descripción:
 ![Branching](../../../assets/images/wiretups/two_million/API.png)
+
+
+
 ![Branching](../../../assets/images/wiretups/two_million/APIV1.png)
 
 # Enumerar la API de administración
