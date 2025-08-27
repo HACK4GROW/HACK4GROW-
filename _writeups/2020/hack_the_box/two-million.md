@@ -167,3 +167,23 @@ curl -X POST http://2million.htb/api/v1/invite/generate
 {"0":200,"success":1,"data":{"code":"SDZVUEktNFNWNFktOVdPWlMtS1BXMFU=","format":"encoded"}}# </code>
 </pre> 
 Ese codigo es el que nos genera
+
+
+Podemos verlo de mejor manera asi:
+
+
+<pre 
+  class="command-line" 
+  data-prompt="kali@kali $" 
+  data-output="4"
+><code class="language-bash"># Bash script with shell
+curl -X POST http://2million.htb/api/v1/invite/generate -s | jq
+{
+  "0": 200,
+  "success": 1,
+  "data": {
+    "code": "Slo5NzEtTUFYSVotSlFMRUktNUNYWTE=",
+    "format": "encoded"
+  }
+} </code>
+</pre> 
