@@ -187,3 +187,16 @@ curl -X POST http://2million.htb/api/v1/invite/generate -s | jq
   }
 } </code>
 </pre> 
+
+Vemos que nos dice encode y por su forma de letras y numeros mas el = al final nos dice que es una codificacion en base 64
+Asi que ahora decodificamos
+
+<pre 
+  class="command-line" 
+  data-prompt="kali@kali $" 
+  data-output="4"
+><code class="language-bash"># Bash script with shell
+echo "Slo5NzEtTUFYSVotSlFMRUktNUNYWTE=" | base64 -d
+JZ971-MAXIZ-JQLEI-5CXY1# </code>
+</pre> 
+      
