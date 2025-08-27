@@ -209,3 +209,17 @@ Asi que ahora lo ponemos en el campo y nos redirige directamente al register con
 
 Nos registramos,iniciamos sesion y ya estamos dentro.
 ![Branching](../../../assets/images/wiretups/two_million/home.png)
+
+Dice que el sitio está realizando migraciones de bases de datos, y algunas características no están disponibles. En realidad, eso significa la mayoría. El tablero, las reglas y los enlaces de Cambiar sesión bajo el trabajo de "Main", y tienen buenas páginas de devolución al HTB original.
+
+Bajo la página "Labs", el único enlace que realmente funciona es la página "Access", que conduce a /home/access:
+![Branching](../../../assets/images/wiretups/two_million/lab.png)
+
+Haciendo clic en "Connection Pack". y "Regengerate", ambos devuelven un .ovpnArchivo. Es una configuración válida de conexión OpenVPN, y puedo tratar de conectarme con ella, pero no funciona.
+
+## API
+Envía una solicitud de GET a /api/v1/user/vpn/generate, y Regenerate envía un GET a /api/v1/user/vpn/regenerate.
+
+Enviaré estas solicitudes a Burp Repeater y jugar con la API. /apidevuelve una descripción:
+![Branching](../../../assets/images/wiretups/two_million/API.png)
+![Branching](../../../assets/images/wiretups/two_million/APIV1.png)
