@@ -200,3 +200,5 @@ echo "Slo5NzEtTUFYSVotSlFMRUktNUNYWTE=" | base64 -d
 JZ971-MAXIZ-JQLEI-5CXY1# </code>
 </pre> 
       
+Vamos de nuevo a la consola de la seccion invite y probamos para ver si es correcto el codigo
+![Branching](../../../assets/images/wiretups/two_million/verificarcodigo.png)
