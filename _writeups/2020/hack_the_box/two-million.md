@@ -248,3 +248,11 @@ Vemos que el error que nos tira es porque el contenido no es valido.Entonces com
 Ahora dice que el correo electrónico está desaparecido. Añadiré que en el cuerpo en JSON:
 
 ![Branching](../../../assets/images/wiretups/two_million/is_admin.png)
+
+
+Ahora quiere is_admin, entonces añadiré que como true:
+![Branching](../../../assets/images/wiretups/two_million/or1.png)
+
+Busca 0 o 1. Lo fijaré en 1, y parece funcionar:
+# RECUERDA PONER EL EMAIL COMO TE REGISTRASTE,EN ESTE EJEMPLO SE VE...
+![Branching](../../../assets/images/wiretups/two_million/admin.png)
