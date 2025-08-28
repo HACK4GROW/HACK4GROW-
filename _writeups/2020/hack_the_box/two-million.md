@@ -245,3 +245,6 @@ Sin embargo, una petición de PUT a /api/v1/admin/settings/updateno devuelve 401
 Vemos que el error que nos tira es porque el contenido no es valido.Entonces como no tenemos content type y al parecer es un JSON se lo sumamos
 ![Branching](../../../assets/images/wiretups/two_million/json.png)
 
+Ahora dice que el correo electrónico está desaparecido. Añadiré que en el cuerpo en JSON:
+
+![Branching](../../../assets/images/wiretups/two_million/is_admin.png)
