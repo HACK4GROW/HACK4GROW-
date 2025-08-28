@@ -234,3 +234,7 @@ No soy administrador,logico.
 
 Si trato de POST a /api/v1/admin/vpn/generate, devuelve 401 Unauthorized:
 ![Branching](../../../assets/images/wiretups/two_million/POST-GENERATE.png)
+
+
+Sin embargo, una petición de PUT a /api/v1/admin/settings/updateno devuelve 401, pero 200, con un error diferente en el cuerpo:
+![Branching](../../../assets/images/wiretups/two_million/PUT-UPDATE.png)
