@@ -232,3 +232,5 @@ Enviaré estas solicitudes a Burp Repeater y jugar con la API. /apidevuelve una 
 No soy administrador,logico.
 ![Branching](../../../assets/images/wiretups/two_million/adminfalse.png)
 
+Si trato de POST a /api/v1/admin/vpn/generate, devuelve 401 Unauthorized:
+![Branching](../../../assets/images/wiretups/two_million/POST-GENERATE.png)
