@@ -257,5 +257,19 @@ Busca 0 o 1. Lo fijaré en 1, y parece funcionar:
 # RECUERDA PONER EL EMAIL COMO TE REGISTRASTE,EN ESTE EJEMPLO SE VE...
 ![Branching](../../../assets/images/wiretups/two_million/admin.png)
 
+```js
+{ "email":"brian@gmail.com",
+"is_admin": 1
+}
+```
+
+
 Si vuelvo a verificar mi autenticacion como admin me dice que si
 ![Branching](../../../assets/images/wiretups/two_million/true.png)
+
+# Inyección de comandos 
+
+## Enumerar generar API
+Como mi cuenta es ahora un administrador, ya no obtengo una respuesta 401 de /api/v1/admin/vpn/generate:
+![Branching](../../../assets/images/wiretups/two_million/admin-vpn.png)
+
