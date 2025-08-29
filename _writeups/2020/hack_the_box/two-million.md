@@ -391,3 +391,44 @@ See "man sudo_root" for details.
 admin@2million:~$ </code>
 
 </pre>
+
+Vemos que tenemos un archivo user.txt
+<pre 
+  class="command-line" 
+  data-prompt="kali@kali $" 
+  data-output="4"
+><code class="language-bash"># Bash script with shell
+cat user.txt
+e6ad744f0740fd9829b0141ac44d7133
+admin@2million:~$ </code>
+
+</pre>
+
+# Enumeración
+## Mail
+
+De hecho, esta explotación podría llevarse a cabo en forma de datos en www. Pero si puedo llegar a administración, hay una pista de dónde mirar.
+
+Cuando me encendí sobre SSH, había una línea en el estandarte que decía que Admin tenía correo. Eso se mantiene en /var/mail/admin:
+
+<pre 
+  class="command-line" 
+  data-prompt="kali@kali $" 
+  data-output="4"
+><code class="language-bash"># Bash script with shell
+From: ch4p <ch4p@2million.htb>
+To: admin <admin@2million.htb>
+Cc: g0blin <g0blin@2million.htb>
+Subject: Urgent: Patch System OS
+Date: Tue, 1 June 2023 10:45:22 -0700
+Message-ID: <9876543210@2million.htb>
+X-Mailer: ThunderMail Pro 5.2
+
+Hey admin,
+
+I'm know you're working as fast as you can to do the DB migration. While we're partially down, can you also upgrade the OS on our web host? There have been a few serious Linux kernel CVEs already this year. That one in OverlayFS / FUSE looks nasty. We can't get popped by that.
+
+HTB Godfather  </code>
+
+</pre>
+
