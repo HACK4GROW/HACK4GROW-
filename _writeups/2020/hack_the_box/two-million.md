@@ -322,7 +322,8 @@ export TERM=xterm
 www-data@2million:~/html$ script /dev/null -c bash
 script /dev/null -c bash
 Script started, output log file is '/dev/null'.
-www-data@2million:~/html$ </code/
+www-data@2million:~/html$ 
+</code/
 </pre>
 stty raw -echo; fg
 reset xterm
@@ -352,7 +353,8 @@ drwxr-xr-x  2 root root 4096 Jun  6  2023 fonts
 drwxr-xr-x  2 root root 4096 Jun  6  2023 images
 -rw-r--r--  1 root root 2692 Jun  2  2023 index.php
 drwxr-xr-x  3 root root 4096 Jun  6  2023 js
-drwxr-xr-x  2 root root 4096 Jun  6  2023 views </code>
+drwxr-xr-x  2 root root 4096 Jun  6  2023 views
+ </code>
 </pre>
 
  index.php define un montón de rutas para las diversas páginas y puntos de endo utilizados en el sitio web.
@@ -370,7 +372,8 @@ cat .env
 DB_HOST=127.0.0.1
 DB_DATABASE=htb_prod
 DB_USERNAME=admin
-DB_PASSWORD=SuperDuperPass123 </code>
+DB_PASSWORD=SuperDuperPass123
+ </code>
 </pre>
 
 # su / SSH
