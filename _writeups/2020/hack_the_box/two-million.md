@@ -322,6 +322,6 @@ export TERM=xterm
 www-data@2million:~/html$ script /dev/null -c bash
 script /dev/null -c bash
 Script started, output log file is '/dev/null'.
-www-data@2million:~/html$ </code/
+www-data@2million:~/html$ </code/>
 </pre>
 
