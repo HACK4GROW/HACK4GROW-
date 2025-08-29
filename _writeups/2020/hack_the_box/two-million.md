@@ -307,3 +307,20 @@ Para conseguir una reverse-shell, empezaré. ncescuchando a mi anfitrión, y pon
 }
 ```
 ![Branching](../../../assets/images/wiretups/two_million/reverse-shell.png)
+
+![Branching](../../../assets/images/wiretups/two_million/netcat.png)
+
+Hacemos un tratamiento de la tty
+
+<pre 
+  class="command-line" 
+  data-prompt="kali@kali $" 
+  data-output="4"
+><code class="language-bash"># Bash script with shell
+www-data@2million:~/html$ export TERM=xterm
+export TERM=xterm
+www-data@2million:~/html$ script /dev/null -c bash
+script /dev/null -c bash
+Script started, output log file is '/dev/null'.
+www-data@2million:~/html$ </code/
+</pre>
