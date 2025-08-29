@@ -387,6 +387,7 @@ Password:
 To run a command as administrator (user "root"), use "sudo <command>".
 See "man sudo_root" for details.
 
-admin@2million:~$ </code>
+admin@2million:~$ 
+</code>
 
 </pre>
